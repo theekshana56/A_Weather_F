@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurfaceContainerHigh">
+
+    <!-- Header with back button and title -->
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Weather Map"
+            android:textColor="@color/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Map Container -->
+    <RelativeLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/header_layout"
+        android:layout_above="@+id/search_container"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/map_container_bg">
+
+        <!-- Placeholder for map - in real implementation this would be a MapView -->
+        <ImageView
+            android:id="@+id/map_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/weather_radar_map"
+            android:scaleType="centerCrop"
+            android:contentDescription="Weather radar map" />
+
+        <!-- Map Controls -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+            <!-- Zoom In Button -->
+            <ImageView
+                android:id="@+id/btn_zoom_in"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/map_control_bg"
+                android:src="@drawable/ic_zoom_in"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:contentDescription="Zoom in" />
+
+            <!-- Zoom Out Button -->
+            <ImageView
+                android:id="@+id/btn_zoom_out"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/map_control_bg"
+                android:src="@drawable/ic_zoom_out"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:contentDescription="Zoom out" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_current_location"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/map"
+            android:clickable="true"
+            android:contentDescription="Current location"
+            android:focusable="true"
+            android:padding="12dp"
+            android:src="@drawable/r_location" />
+
+        <!-- Location markers overlay -->
+
+    </RelativeLayout>
+
+    <!-- Search Container -->
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_marginBottom="11dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Search Bar -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bar_bg">
+
+            <ImageView
+                android:id="@+id/ic_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:contentDescription="Search"
+                android:src="@drawable/ic_search_gray" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_toStartOf="@+id/ic_mic"
+                android:layout_toEndOf="@+id/ic_search"
+                android:background="@android:color/transparent"
+                android:hint="Search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/colorOnSurface"
+
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ic_mic"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="Voice search"
+                android:focusable="true"
+                android:padding="4dp"
+                android:src="@drawable/ic_mic" />
+        </RelativeLayout>
+
+        <!-- Location Button -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorSurfaceContainerHigh"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp">
+
+        <!-- Home Button -->
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/home_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Home"
+                android:textColor="@color/colorOnSurface"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Search Button (Active) -->
+        <LinearLayout
+            android:id="@+id/nav_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/search_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Search"
+                android:textColor="@color/colorTertiary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Alerts Button -->
+
+        <!-- Alerts Button -->
+        <LinearLayout
+            android:id="@+id/nav_alerts"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/alert_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Alerts"
+                android:textColor="#757575"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Map Button -->
+        <LinearLayout
+            android:id="@+id/nav_map"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="49dp"
+                android:src="@drawable/map_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Map"
+                android:textColor="@color/colorOnSurface"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Settings Button -->
+        <LinearLayout
+            android:id="@+id/nav_settings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/setting_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Settings"
+                android:textColor="@color/colorOnSurface"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

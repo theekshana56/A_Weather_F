@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_dark_blue">#23243A</color>
+    <color name="theme_light_gray_blue">#D2D4DF</color>
+    <color name="theme_muted_blue_gray">#6B6D89</color>
+    <color name="theme_soft_blue">#8B8DB2</color>
+    <color name="theme_pale_blue">#A0A5C2</color>
+    <color name="theme_deep_blue">#4A4C6A</color>
+    <color name="theme_midnight_blue">#3B3D5A</color>
+    <color name="theme_grayish_blue">#656674</color>
+    <color name="theme_almost_black">#23232E</color>
+    <color name="theme_slate_gray">#5A616C</color>
+    <!-- Primary/Secondary/Surface/Background assignments -->
+    <color name="colorPrimary">#4A4C6A</color>
+    <color name="colorOnPrimary">#D2D4DF</color>
+    <color name="colorSecondary">#8B8DB2</color>
+    <color name="colorOnSecondary">#23243A</color>
+    <color name="colorSurface">#23243A</color>
+    <color name="colorOnSurface">#D2D4DF</color>
+    <color name="colorBackground">#23232E</color>
+    <color name="colorOnBackground">#D2D4DF</color>
+    <color name="colorTertiary">#A0A5C2</color>
+    <color name="colorOnTertiary">#23243A</color>
+    <color name="colorSurfaceContainer">#3B3D5A</color>
+    <color name="colorSurfaceContainerHigh">#5A616C</color>
+    <color name="colorSurfaceContainerHighest">#6B6D89</color>
+    <color name="colorOutline">#8B8DB2</color>
+    <color name="colorOutlineVariant">#656674</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
+
+

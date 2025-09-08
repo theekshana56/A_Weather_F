@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Blue sky</string>
+    <string name="_30">30°</string>
+    <string name="heavy_rain">Heavy Rain</string>
+    <string name="Badulla_sri_lanka">Badulla, Sri Lanka</string>
+    <string name="h_26_l_18">H: 26° L: 18°</string>
+    <string name="now">Now</string>
+    <string name="sunny">Sunny</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="partly_cloudy">Partly Cloudy</string>
+    <string name="thunderstorm">Thunderstorm</string>
+    <string name="mist">Mist</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="feels_like">Feels Like</string>
+    <string name="settings">Settings</string>
+    <string name="refresh">Refresh</string>
+    <string name="search">Search</string>
+    <string name="enter_city">Enter city name</string>
+    <string name="error_no_connection">No internet connection</string>
+    <string name="error_location">Unable to get location</string>
+    <string name="try_again">Try Again</string>
+    <string name="updated_at">Updated at</string>
+    <string name="forecast">Forecast</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="week">This Week</string>
+    <string name="rainy_conditions_expected_around_5am_wind_gusts_are_up_to_8_mph">Rainy conditions expected around 5AM. Wind gusts are up to 8 mph.</string>
+</resources>
