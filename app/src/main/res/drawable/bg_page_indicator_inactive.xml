@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Background color for inactive indicator -->
+    <solid android:color="#E0E0E0" />
+
+    <!-- Optional stroke for consistency -->
+    <stroke
+        android:width="0.5dp"
+        android:color="#BDBDBD" />
+
+</shape>
